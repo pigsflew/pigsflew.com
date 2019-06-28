@@ -1,0 +1,170 @@
+/** Layout **/
+body {
+    min-height: 95%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+main, footer {
+    margin: 1em auto;
+    padding: .5em;
+    width: 60%;
+    min-width: 400px;
+    max-width: 600px;
+}
+[social] .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-width: 50%;
+    margin: 0 auto;
+}
+header, section {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+/** Borders and Shapes **/
+header, section:not(:last-child) {
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: .3em;
+}
+h1 {
+    margin: .5em auto;
+}
+aside {
+    margin-bottom: .5em;
+}
+main {
+    text-align: center;
+    border-radius: 5px;
+    padding: 2em;
+}
+[avatar] {
+    height: 10em;
+    width: 10em;
+    border-radius: 50%;
+    background-clip: padding-box;
+}
+section[social] {
+    padding-bottom: 1em;
+}
+header::before {
+    display: block;
+    margin-bottom: -5.3em;
+    border-bottom: 7px double #ccc;
+    width:100%; height:1px;
+    content: " ";
+} 
+footer {
+    text-align: center;
+}
+
+/** Animations **/
+main {
+    transition: .3s;
+}
+
+/** Colors, fonts, and shading **/
+html {
+    position: absolute;
+    top:0; bottom: 0; left: 0; right: 0;
+    font-family: 'Noto Sans', sans-serif;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.7), 
+            rgba(0, 0, 0, 0.7)
+        ),
+        url(https://pxlfd.me/storage/m/2f379dea1475aae71ee95f89a049885298819585/ae47249648c4685575d98eebcc37f060313379e8/4OXtlPsPryTsREb4jdfCdphoQvAHZm2kFWrS9HS2.jpeg) 
+        #111;
+    color: #e9e9e9;
+    overflow: auto;
+    /* create a little ditch for everything else to sit in */
+    box-shadow: inset 4px -4px 8px 0 rgba(0,0,0,0.8),
+                inset -4px 4px 8px 0 rgba(0,0,0,0.8);
+}
+h1 {
+    font-size: 200%;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    white-space: nowrap;
+}
+a, a:visited {
+    color: #c9c9ff;
+    text-decoration: none;
+}
+a:hover {
+    color: #e9e9ff;
+}
+main {
+    background: #333;
+}
+[about] ul {
+    font-weight: lighter;
+    list-style: none;
+    padding-inline-start: 0;
+}
+ul li + li {
+    margin-top: .5em;
+}
+.fas, .fab {
+    margin: 0 .25em;
+}
+footer {
+    font-size: .8rem;
+}
+a.fab, a.fas {
+    line-height: 1em;
+    color: inherit;
+}
+a.fab:hover, a.fas:hover {
+    box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.5), -4px -4px 8px 0 rgba(0,0,0,0.5),
+        -4px 4px 8px 0 rgba(0,0,0,0.5), 4px -4px 8px 0 rgba(0,0,0,0.5);
+    color: #c9c9ff;
+    border-color: #c9c9ff;   
+}
+.fas.fa-border, 
+.fab.fa-border {
+    /* Transitions make these generated borders obvious and wobbly. */
+    transition: color, box-shadow .3s;
+    display: inline-flex;
+    justify-content: center; 
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    border-width: 3px;
+    border-radius: 50%;
+    padding: 4px;
+}
+[glow] {
+    box-shadow:
+        4px 4px 4px 0 rgba(255,255,255,0.25), -4px -4px 4px 0 rgba(255,255,255,0.25),
+        -4px 4px 4px 0 rgba(255,255,255,0.25), 4px -4px 4px 0 rgba(255,255,255,0.25);
+}
+[deep-shadow], main {
+    box-shadow:
+        4px 4px 8px 0 rgba(0,0,0,0.5), -4px -4px 8px 0 rgba(0,0,0,0.5),
+        -4px 4px 8px 0 rgba(0,0,0,0.5), 4px -4px 8px 0 rgba(0,0,0,0.5);
+}
+[shadow], main {
+    box-shadow:
+        4px 4px 4px 0 rgba(0,0,0,0.5), -4px -4px 4px 0 rgba(0,0,0,0.5),
+        -4px 4px 4px 0 rgba(0,0,0,0.5), 4px -4px 4px 0 rgba(0,0,0,0.5);
+}
+
+/* Fontawesome doesn't have some fediverse logos. */
+.customlogo img {
+    filter: invert(100%) brightness(.9);
+    display: block;
+    height: 1em;
+    width: auto;
+}
+.customlogo:hover img {
+    /* hey look i found a silly way to colorize a black image! */
+    filter: invert(100%) sepia(100%)
+        saturate(1500%) hue-rotate(180deg);
+}

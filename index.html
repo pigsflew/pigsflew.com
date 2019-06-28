@@ -14,64 +14,83 @@
 
       <!-- CSS from elsewhere -->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3/animate.min.css">
-      <link href="https://fonts.googleapis.com/css?family=Noto\ Sans:700" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shrinathnayak07/portfolio-old/style.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Noto Sans:400" rel="stylesheet">
 
       <!-- My own CSS -->
-      <style>
-        * {
-          font-family: 'Noto Sans', sans-serif;
-        }
-
-        body {
-          background: #111;
-        }
-      </style>
+      <!-- Uncomment this when ready
+         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/pigsflew/pigsflew.com">
+      -->
+      <link rel="stylesheet" type="text/css" href="res/style.css">
 
       <!-- JS -->
-      <script src="https://use.fontawesome.com/092cc8b6d9.js"></script>
+      <script src="https://kit.fontawesome.com/0dab100bd9.js"></script>
 </head>
    <body>
       <!--Card-->
-      <div class="card animated fadeIn">
-         <center><img class="center animated rollIn" src="https://files.mastodon.social/accounts/avatars/000/298/354/original/1ef57b01e6e23edc.jpg" alt="avatar"></center>
-         <hr>
-         <div class="name">
-            Adrianne Greenberg-Sud
-         </div>
-         <p class="subtitle">Senior Software Engineer</p>
-         <p class="location"><i class="fa fa-map-marker"> </i><a href="http://www.indeed.com/" target="_blank">Indeed.com</a>
-         </p>
-         <p class="icons animated pulse">
-            <a href="https://twitter.com/pigsflew" rel="me" target="_blank">
-              <span class="fa-stack fa-lg">
-                  <i class="fa fa-circle-thin fa-stack-2x"></i>
-                  <i class="fa fa-twitter fa-stack-1x"></i>
-              </span>
-            </a>
-            <a href="https://www.facebook.com/when_pigsflew" rel="me" target="_blank">
-            <span class="fa-stack fa-lg">
-                <i class="fa fa-circle-thin fa-3x fa-stack-2x"></i>     
-                <i class="fa fa-facebook fa-stack-1x"></i>
-            </span>
-            </a>
-            <a href="https://www.instagram.com/pigsflew/" target="_blank">
-            <span class="fa-stack fa-lg">
-                <i class="fa fa-circle-thin fa-stack-2x"></i>
-                <i class="fa fa-instagram fa-stack-1x"></i>
-            </span>
-            </a>
-            <a href="https://github.com/pigsflew" target="_blank">
-            <span class="fa-stack fa-lg">
-                <i class="fa fa-circle-thin fa-stack-2x"></i>
-                <i class="fa fa-github fa-stack-1x"></i>
-            </span>
-            </a>
-         </p>
-      </div>
+      <main class="card animated fadeIn">
+         <header>
+            <img avatar shadow class="center animated rollIn" src="https://secure.gravatar.com/avatar/2aeeba50865575b230d49046bff28912?s=256"></img>
+            <h1>Adrianne Greenberg-Sud</h1>
+            <aside>Senior Software Developer @ Indeed.com</aside>
+         </header>
+         <section about>
+            <ul>
+               <li>Lives in <a href="https://goo.gl/maps/VVn1t7ydqhndsfzm6"><i class="fas fa-map-marked-alt"></i>Seattle, WA</a></li>
+               <li>Is a
+                  <i class="fas fa-transgender"></i>transgender 
+                  <i class="fas fa-users"></i>poly
+                  <i class="fas fa-heart"></i>pansexual
+                  <a href="http://pronoun.is/she"><i class="fas fa-female"></i>woman</a>
+               </li>
+               <li>Has a <i class="fas fa-graduation-cap"></i>bachelor's from UMass Amherst</li>
+               <li>Loves 
+                  <i class="fas fa-hat-wizard"></i>roleplaying,
+                  <i class="fas fa-meteor"></i>scifi,
+                  <i class="fas fa-mask"></i>superheroes, and
+                  <i class="fas fa-balance-scale"></i>social justice.
+               </li>
+            </ul>
+         </section>
+         <section social>
+            <h3>Catch me on these platforms</h3>
+            <p class="icons animated pulse">
+               <a class="fab fa-facebook fa-2x fa-border" rel="me" target="_blank"
+                  title="facebook" href="https://www.facebook.com/when_pigsflew"></a>
+               <a class="fab fa-twitter fa-2x fa-border" rel="me" target="_blank"
+                  title="Twitter" href="https://twitter.com/pigsflew"></a>
+               <a class="fab fa-instagram fa-2x fa-border" rel="me" target="_blank"
+                  title="Instagram" href="https://www.instagram.com/pigsflew/"></a>
+               <a class="fab fa-instagram fa-2x fa-border" rel="me" target="_blank"
+                  title="Instagram" href="https://www.instagram.com/pigsflew/"></a>
+               <a class="fab fa-pinterest fa-2x fa-border" rel="me" target="_blank"
+                  title="Pinterest" href="https://www.pinterest.com/whenpigsflew/"></a>
+               <a class="fab fa-spotify fa-2x fa-border" rel="me" target="_blank"
+                  title="Spotify" href="http://open.spotify.com/user/pigsflew"></a>
+               <a class="fab fa-linkedin fa-2x fa-border" rel="me" target="_blank"
+                  title="Linkedin" href="https://linkedin.com/in/pigsflew"></a>
+            </p>
+         </section>
+         <section social>
+               <h3>I'm also in the Fediverse</h3>
+               <p class="icons animated pulse">
+                  <a class="fab fa-mastodon fa-2x fa-border" rel="me" target="_blank"
+                     title="Mastodon" href="https://mastodon.social/@pigsflew"></a>
+                  <a class="fab customlogo fa-2x fa-border" rel="me" target="_blank"
+                     title="Pixelfed" href="https://pxlfd.me/pigsflew">
+                     <img src="res/pixelfed.svg" />
+                  </a>
+                  <a class="fab customlogo fa-2x fa-border" rel="me" target="_blank"
+                     title="Peertube" href="https://peertube.video/accounts/pigsflew">
+                     <img src="res/peertube.svg" />
+                  </a>
+                  <a class="fab fa-github fa-2x fa-border" rel="me" target="_blank"
+                     title="Github" href="https://www.instagram.com/pigsflew/"></a>
+               </p>
+            </section>
+         </main>
       <!--footer-->
       <footer class="animated fadeIn">
-         &copy; 2019. Addie Greenberg Sud. Made using <a href="https://github.com/shrinathnayak07/portfolio-old"/>a template by Shrinath Nayak</a>. 
+         &copy; 2019 Addie Greenberg Sud. Code for this site <a href="https://github.com/pigsflew/pigsflew.com">released under CC-BY-SA</a>.
       </footer>
    </body>
 </html>
