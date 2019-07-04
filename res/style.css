@@ -87,8 +87,8 @@ html {
     color: #e9e9e9;
     overflow: auto;
     /* create a little ditch for everything else to sit in */
-    box-shadow: inset 4px -4px 8px 0 rgba(0,0,0,0.8),
-                inset -4px 4px 8px 0 rgba(0,0,0,0.8);
+    box-shadow: inset 4px -4px 8px 0 rgba(0,0,0,0.6),
+                inset -4px 4px 8px 0 rgba(0,0,0,0.6);
 }
 h1 {
     font-size: 200%;
@@ -142,19 +142,19 @@ ul li + li {
 [shadow-box], .shadow-box,
 [hover-shadow]:hover, .hover-shadow:hover,
 [hover-shadow-box]:hover, .hover-shadow-box:hover {
-    box-shadow: 0 0 .5em 0 rgba(0,0,0,0.25);
+    box-shadow: 0 0 1em 0 rgba(0,0,0,0.8);
 }
 [shadow], .shadow,
 [shadow-text], .shadow-box,
 [hover-shadow]:hover, .hover-shadow:hover,
 [hover-shadow-text]:hover, .hover-shadow-text:hover {
-    text-shadow: 0 0 .5em 0 rgba(0,0,0,0.25);
+    text-shadow: 0 0 .5em 0 rgba(0,0,0,0.8);
 }
 [shadow] img, .shadow img,
 [shadow-text] img, .shadow-text img,
 [hover-shadow]:hover img, .hover-shadow:hover img,
 [hover-shadow-text]:hover img, .hover-shadow-text:hover img {
-    filter: drop-shadow(0 0 .5em 0 rgba(0,0,0,0.25)); 
+    filter: drop-shadow(0 0 .5em 0 rgba(0,0,0,0.5)); 
 }
 
 /****** FONTAWESOME FIXES *******/
@@ -191,6 +191,7 @@ a.customlogo:not(.fa-border):hover img {
 .fas:not(:empty),
 .fab:not(:empty) {
     font: inherit!important;
+    margin: 0;
 }
 .fa:not(.customlogo):not(:empty)::before,
 .far:not(:empty)::before,
