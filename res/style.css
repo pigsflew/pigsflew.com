@@ -1,18 +1,18 @@
 /** Layout **/
 body {
     min-height: 95%;
-}
-body {
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
 }
 main, footer {
-    margin: 1em auto;
+    margin: .5em auto;
     padding: .5em;
     width: 60%;
-    min-width: 400px;
+    min-width: 450px;
     max-width: 600px;
 }
 [social] .icons {
@@ -39,9 +39,10 @@ aside {
     margin-bottom: .5em;
 }
 main {
+    margin-top: 3em;   
     text-align: center;
     border-radius: 5px;
-    padding: 2em;
+    padding: 2em 0;
 }
 [avatar] {
     height: 10em;
@@ -60,6 +61,7 @@ header::before {
     content: " ";
 } 
 footer {
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -78,8 +80,10 @@ html {
             rgba(0, 0, 0, 0.7), 
             rgba(0, 0, 0, 0.7)
         ),
-        url(https://pxlfd.me/storage/m/2f379dea1475aae71ee95f89a049885298819585/ae47249648c4685575d98eebcc37f060313379e8/4OXtlPsPryTsREb4jdfCdphoQvAHZm2kFWrS9HS2.jpeg) 
+        center / cover no-repeat
+        url(bg.jpg)
         #111;
+    background-size: cover;
     color: #e9e9e9;
     overflow: auto;
     /* create a little ditch for everything else to sit in */
@@ -93,12 +97,8 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     white-space: nowrap;
 }
-a, a:visited {
-    color: #c9c9ff;
-    text-decoration: none;
-}
-a:hover {
-    color: #e9e9ff;
+footer {
+    font-size: .8rem;
 }
 main {
     background: #333;
@@ -107,64 +107,160 @@ main {
     font-weight: lighter;
     list-style: none;
     padding-inline-start: 0;
+    padding-left: 0;
 }
 ul li + li {
     margin-top: .5em;
 }
-.fas, .fab {
+
+/********** FUN WITH CSS SHADOWS! **************/
+[hover-glow], [hover-glow-text], [hover-glow-box],
+[hover-shadow], [hover-shadow-text], [hover-shadow-box],
+.hover-glow, .hover-glow-text, .hover-glow-box,
+.hover-shadow, .hover-shadow-text, .hover-shadow-box {
+    transition: color, filter, box-shadow, text-shadow, border-color 0.3s;   
+}
+[glow], .glow,
+[glow-box], .glow-box,
+[hover-glow]:hover, .hover-glow:hover,
+[hover-glow-box]:hover, .hover-glow-box:hover {
+    box-shadow: 0 0 .5em 0 rgba(255,255,255,0.25);
+}
+[glow], .glow,
+[glow-text], .glow-text,
+[hover-glow]:hover, .hover-glow:hover,
+[hover-glow-text]:hover, .hover-glow-text:hover {
+   text-shadow: 0 0 .5em 0 rgba(255,255,255,0.25);
+}
+[glow] img, .glow img,
+[glow-text] img, .glow-text img,
+[hover-glow]:hover img, .hover-glow img,
+[hover-glow-text]:hover img, .hover-glow-text img {
+   filter: drop-shadow(0 0 .5em 0 rgba(255,255,255,0.25));
+}
+[shadow], .shadow,
+[shadow-box], .shadow-box,
+[hover-shadow]:hover, .hover-shadow:hover,
+[hover-shadow-box]:hover, .hover-shadow-box:hover {
+    box-shadow: 0 0 .5em 0 rgba(0,0,0,0.25);
+}
+[shadow], .shadow,
+[shadow-text], .shadow-box,
+[hover-shadow]:hover, .hover-shadow:hover,
+[hover-shadow-text]:hover, .hover-shadow-text:hover {
+    text-shadow: 0 0 .5em 0 rgba(0,0,0,0.25);
+}
+[shadow] img, .shadow img,
+[shadow-text] img, .shadow-text img,
+[hover-shadow]:hover img, .hover-shadow:hover img,
+[hover-shadow-text]:hover img, .hover-shadow-text:hover img {
+    filter: drop-shadow(0 0 .5em 0 rgba(0,0,0,0.25)); 
+}
+
+/****** FONTAWESOME FIXES *******/
+/* Fontawesome doesn't have some fediverse logos.
+    This allows us to add them by simply having our fa icon
+    contain a transparent black logo image (preferably SVG).
+*/
+.customlogo img {
+    /* change it to white so it doesn't stand out */
+    filter: invert(100%) brightness(.9);
+    display: block;
+    height: .95em;
+    width: auto;
+}
+a.customlogo:not(.fa-border) img,
+a.customlogo.fa-border:hover img {
+    /* hey look i found a silly way to colorize a black image! */
+    /* Approximates #c9c9ff (link color) */
+    filter: invert(100%) sepia(100%)
+        saturate(2500%) hue-rotate(180deg);
+}
+a.customlogo:not(.fa-border):hover img {
+    /* Approximates #e9e9ff (link highlight color) */
+    filter: invert(100%) sepia(100%)
+        saturate(2500%) hue-rotate(179deg) brightness(0.9);
+}
+
+/* This allows us to have our icons wrap the text they apply
+    to, if we like; uses the FA font only on the ::before element
+    which will contain the icon glyph.
+*/
+.fa:not(.customlogo):not(:empty),
+.far:not(:empty),
+.fas:not(:empty),
+.fab:not(:empty) {
+    font: inherit!important;
+}
+.fa:not(.customlogo):not(:empty)::before,
+.far:not(:empty)::before,
+.fas:not(:empty)::before,
+.fab:not(:empty)::before {
+    margin: 0 .15em;
+}
+.fa:not(.customlogo)::before, .far::before, .fas::before, .fab::before {
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 900;
+    break-after: avoid;
+}
+.fab::before {
+    font-family: "Font Awesome 5 Brands" !important;
+}
+.fa::before, .far::before, .fas::before {
+    font-family: "Font Awesome 5 Pro" !important;
+}
+a, a:visited,
+a.fa, a.fa:visited,
+a.fab, a.fab:visited,
+a.fas, a.fas:visited {
+    color: #c9c9ff;
+    text-decoration: none;
+}
+a:hover,
+a.fa:hover,
+a.fab:hover,
+a.fas:hover {
+    color: #e9e9ff;
+}
+.fa, .fas, .fab {
     margin: 0 .25em;
 }
-footer {
-    font-size: .8rem;
-}
-a.fab, a.fas {
+a.fa.fa-border,
+a.fab.fa-border,
+a.fas.fa-border {
     line-height: 1em;
     color: inherit;
 }
-a.fab:hover, a.fas:hover {
-    box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.5), -4px -4px 8px 0 rgba(0,0,0,0.5),
-        -4px 4px 8px 0 rgba(0,0,0,0.5), 4px -4px 8px 0 rgba(0,0,0,0.5);
+a.fa.fa-border:hover,
+a.fab.fa-border:hover,
+a.fas.fa-border:hover {
     color: #c9c9ff;
     border-color: #c9c9ff;   
 }
+.fa.fa-border,
 .fas.fa-border, 
 .fab.fa-border {
-    /* Transitions make these generated borders obvious and wobbly. */
-    transition: color, box-shadow .3s;
-    display: inline-flex;
-    justify-content: center; 
+    display: inline-block;
+    text-align: center;
     vertical-align: middle;
-    width: 1em;
-    height: 1em;
     border-width: 3px;
     border-radius: 50%;
-    padding: 4px;
+    height: 1.2em!important;
+    width: 1.2em!important;
+    line-height:1.2em!important;
+    padding: 0.05em 0.05em 0.05em 0.025em;
+    margin: 0 .15em;
 }
-[glow] {
-    box-shadow:
-        4px 4px 4px 0 rgba(255,255,255,0.25), -4px -4px 4px 0 rgba(255,255,255,0.25),
-        -4px 4px 4px 0 rgba(255,255,255,0.25), 4px -4px 4px 0 rgba(255,255,255,0.25);
-}
-[deep-shadow], main {
-    box-shadow:
-        4px 4px 8px 0 rgba(0,0,0,0.5), -4px -4px 8px 0 rgba(0,0,0,0.5),
-        -4px 4px 8px 0 rgba(0,0,0,0.5), 4px -4px 8px 0 rgba(0,0,0,0.5);
-}
-[shadow], main {
-    box-shadow:
-        4px 4px 4px 0 rgba(0,0,0,0.5), -4px -4px 4px 0 rgba(0,0,0,0.5),
-        -4px 4px 4px 0 rgba(0,0,0,0.5), 4px -4px 4px 0 rgba(0,0,0,0.5);
-}
-
-/* Fontawesome doesn't have some fediverse logos. */
-.customlogo img {
-    filter: invert(100%) brightness(.9);
+.customlogo img,
+.fa.fa-border:before,
+.fas.fa-border:before,
+.fab.fa-border:before {
     display: block;
-    height: 1em;
+    margin: 0 auto;
+    line-height:1.3em;
+    height: 1.2em;
     width: auto;
-}
-.customlogo:hover img {
-    /* hey look i found a silly way to colorize a black image! */
-    filter: invert(100%) sepia(100%)
-        saturate(1500%) hue-rotate(180deg);
+    vertical-align:top;
+    text-align:center;
 }
