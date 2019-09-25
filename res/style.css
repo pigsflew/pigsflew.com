@@ -257,11 +257,12 @@ a.fas.fa-border:hover {
 .fa.fa-border:before,
 .fas.fa-border:before,
 .fab.fa-border:before {
-    display: block;
-    margin: 0 auto;
-    line-height:1.3em;
-    height: 1.2em;
+    line-height: 1em;
+    font-size: 1.2em;
     width: auto;
-    vertical-align:top;
-    text-align:center;
+    display: flex;
+    justify-content: space-around;
+    margin: -0.05em -0.05em -0.05em -0.02em;
+    max-height: fit-content;
+    padding: 0.1em;
 }
