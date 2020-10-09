@@ -1,0 +1,73 @@
+==================================================================
+https://keybase.io/pigsflew
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://pigsflew.com
+  * I am pigsflew (https://keybase.io/pigsflew) on keybase.
+  * I have a public key with fingerprint 3414 2FA6 F532 F63B 1BE4  958A 0874 2ED0 FB52 27B5
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01015d70855b00d146f26a8b4e171b69967c23ada857ee3fbe5e615341f8a8c91cf00a",
+      "fingerprint": "34142fa6f532f63b1be4958a08742ed0fb5227b5",
+      "host": "keybase.io",
+      "key_id": "08742ed0fb5227b5",
+      "kid": "01015d70855b00d146f26a8b4e171b69967c23ada857ee3fbe5e615341f8a8c91cf00a",
+      "uid": "de2a59a865d62e4d46bea006d47d7519",
+      "username": "pigsflew"
+    },
+    "service": {
+      "hostname": "pigsflew.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1602222753,
+  "expire_in": 157680000,
+  "prev": "04835c39b9f02e6d76e833b9055e02f24e57b25b6b11a810674ce49c07acac7f",
+  "seqno": 5,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owGtUmtQVGUY3kWYgElbkphxDbRD5EQE5/ady5oQjlycTFpkkhLZOZfvsAfxnG13
+BZRBdJhgQofbSOmAzLiMOIAC0shE2xDkrUDJS02URJcBhosppgsKaZ1j+af+9v75
+5nvf53m+532/t3rpEkOgMdAde2Uxfc0Z4+AUb7CVLBwvQnhV3I1YipAd8PEB80To
+ctt2yCJiQVAMxYBIowwAPIqKGElJOMUxPAkxGuMplqVoASc4kWMADSEh8RBACgME
+iUkMxwgsJkgoyiExiCQrOdDpcMqKW5PV6iQucZQECFyiCB7jIckChkMZmsShiEo8
+wHGaBxrRrrp0hmaO51wwVla1nHax/W3vv/j/2feux3IixDnAcgwFRAqHpEhSPORQ
+lBJJWqQBxupAF3Qq3E6ooR1yjkvKgwVIcQyiZfNlAeqD1Tv5FyJWUHdqXIdTdauC
+mqdV7G63w2XRme7dDh1aAHnbPyI2XlZEbY4aIx86XbKqIBZMQwpuWVfFKBTXggZE
+DAILHbIT2mQdAWiKQbXQ34H5+nBIhgACkcnyrITikBJpCjIEwbMoABDFJZyEgOZx
+wFM8hnEMhlI0KWgfJKA0J3ACLSF6X+8pKmIBmk8uR9N0yTkK597lhEhx8Ad+hL/B
+GGgID3vBnwyNa/bhc2tXjtVVPNm9AD998QzBQaYnmeh2k+HE3MXs0iYrf63q89rX
+a0Z83jf33++M8IUNllwqgqaysZqkqZrmhn3dHiIzLrKvMKFx9RtvH87dVj9/9mGa
+aTz0mMf6yR+mfKX097hnrUMfX6ub9pgzVm67M97VfOYy1xZyM6LdUx623pjaMhfv
+I3tn+m8T76A/Hc1s3Zg3ebUCC+koj806svnPtXQSaXnOXKu81rbduzH44Bci7vom
+ujgiX+az6w6k2rK/bZ9J7BpZZxytqDSPbEpVWP/qqZ6tyIr64gf9Y1mt/bWnoqwv
+B6T9kGy7em6VoKyqXjxl/rATPLw+KfP27Z2NLb6yvYnDk5h5Mrm3YP7TnoQtt75u
+fzro5qI8Zx69fcMv8EpKwWl3OvcUSb11OGrcElNhK7Pf6LJ/FNeR2Bt8CImNvNv3
+44XZ7wv7vsxtac5avqIqaPZsd7gjynxLKq9MmDZEi9WOZ+a9yc9PZEwHdO9pSCzf
+f7S12WNdHXK9obGkrHjBOmQ5bxxgD6rnf16+NI3eEBI0s+n9ifjMxIyFA+dyuZb4
+0/cefHbh0aUjXsPl43dGX9q77F3LhnXCsTb77FToi57BoTHvr9SoIWluT0lrw5ao
+ykAya42yuXRfU239ROSjgZ6UYbN3OOeX9IvDs00n5+WM9cuWnBjtM/gsXNxvloEU
+072TM9/RVU3hd+kO9ZWtyv19X9VMvBow9Bc=
+=4QwI
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/pigsflew
+
+==================================================================
+
