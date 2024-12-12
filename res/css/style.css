@@ -187,19 +187,19 @@ a.customlogo:not(.fa-border):hover img {
     which will contain the icon glyph.
 */
 .fa:not(.customlogo):not(:empty),
-.far:not(:empty),
-.fas:not(:empty),
+.fa-regular:not(:empty),
+.fa-solid:not(:empty),
 .fab:not(:empty) {
     font: inherit!important;
     margin: 0;
 }
 .fa:not(.customlogo):not(:empty)::before,
-.far:not(:empty)::before,
-.fas:not(:empty)::before,
+.fa-regular:not(:empty)::before,
+.fa-solid:not(:empty)::before,
 .fab:not(:empty)::before {
     margin: 0 .15em;
 }
-.fa:not(.customlogo)::before, .far::before, .fas::before, .fab::before {
+.fa:not(.customlogo)::before, .fa-regular::before, .fas::before, .fab::before {
     font-style: normal;
     font-variant: normal;
     font-weight: 900;
@@ -208,20 +208,20 @@ a.customlogo:not(.fa-border):hover img {
 .fab::before {
     font-family: "Font Awesome 5 Brands" !important;
 }
-.fa::before, .far::before, .fas::before {
+.fa::before, .fa-regular::before, .fa-solid::before {
     font-family: "Font Awesome 5 Pro" !important;
 }
 a, a:visited,
 a.fa, a.fa:visited,
 a.fab, a.fab:visited,
-a.fas, a.fas:visited {
+a.fa-solid, a.fa-solid:visited {
     color: #c9c9ff;
     text-decoration: none;
 }
 a:hover,
 a.fa:hover,
 a.fab:hover,
-a.fas:hover {
+a.fa-solid:hover {
     color: #e9e9ff;
 }
 .fa, .fas, .fab {
@@ -229,18 +229,18 @@ a.fas:hover {
 }
 a.fa.fa-border,
 a.fab.fa-border,
-a.fas.fa-border {
+a.fa-solid.fa-border {
     line-height: 1em;
     color: inherit;
 }
 a.fa.fa-border:hover,
 a.fab.fa-border:hover,
-a.fas.fa-border:hover {
+a.fa-solid.fa-border:hover {
     color: #c9c9ff;
     border-color: #c9c9ff;   
 }
 .fa.fa-border,
-.fas.fa-border, 
+.fa-solid.fa-border, 
 .fab.fa-border {
     display: inline-block;
     text-align: center;
@@ -255,7 +255,7 @@ a.fas.fa-border:hover {
 }
 .customlogo img,
 .fa.fa-border:before,
-.fas.fa-border:before,
+.fa-solid.fa-border:before,
 .fab.fa-border:before {
     line-height: 1em;
     font-size: 1.2em;
