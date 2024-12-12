@@ -225,12 +225,11 @@ a.fa-solid:hover {
     color: #e9e9ff;
 }
 .fa, .fas, .fab {
-    margin: 0 .25em;
+    margin: 0 .1em;
 }
 a.fa.fa-border,
 a.fab.fa-border,
 a.fa-solid.fa-border {
-    line-height: 1em;
     color: inherit;
 }
 a.fa.fa-border:hover,
@@ -242,27 +241,12 @@ a.fa-solid.fa-border:hover {
 .fa.fa-border,
 .fa-solid.fa-border, 
 .fab.fa-border {
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
     border-width: 3px;
     border-radius: 50%;
-    height: 1.2em!important;
-    width: 1.2em!important;
-    line-height:1.2em!important;
-    padding: 0.05em 0.05em 0.05em 0.025em;
-    margin: 0 .15em;
 }
 .customlogo img,
 .fa.fa-border:before,
 .fa-solid.fa-border:before,
 .fab.fa-border:before {
-    line-height: 1em;
-    font-size: 1.2em;
-    width: auto;
-    display: flex;
-    justify-content: space-around;
-    margin: -0.05em -0.05em -0.05em -0.02em;
-    max-height: fit-content;
-    padding: 0.1em;
+    margin: -0.05em -0.05em -0.05em -0.05em;
 }
